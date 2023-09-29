@@ -15,7 +15,6 @@ task build
 
 //declare a task to create a zip of the app
 task zip(type: Zip) {
-	archiveFileName = "trainSchedule"
 	from ('.') {
 		include "*"
 		include "bin/**"
@@ -25,7 +24,8 @@ task zip(type: Zip) {
 		include "routes/**"
 		include "views/**"
 	}
-	into("dist/")
+	destinationDirectory = layout.buildDirectory.dir("dist")
+        baseName = "trainSchedule"
 }
 
 //declare task dependencies
