@@ -23,7 +23,7 @@ task zip(type: Zip) {
 		include "routes/**"
 		include "views/**"
 	}
-	into("dist/trainSchedule.zip"))
+	into("dist/trainSchedule.zip")
 }
 
 //declare task dependencies
